@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap");
+* {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 500;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.c_button_material {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.c_button_material .btn_wrapper {
+  padding-top: 20px;
+}
+
+.c_button_material .button {
+  display: inline-block;
+  margin: 5px;
+  padding: 1.2rem 3.5rem;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: none;
+  overflow: hidden;
+}
+
+.c_button_material .blue {
+  background-color: #03A9F4;
+  color: white;
+}
+
+.c_button_material .red {
+  background-color: #F44336;
+  color: white;
+}
+
+.c_button_material .green {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.ripple {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 100%;
+  -webkit-transform: scale(0.2);
+          transform: scale(0.2);
+  opacity: 0;
+  pointer-events: none;
+  -webkit-animation: ripple .75s ease-out;
+          animation: ripple .75s ease-out;
+}
+
+@-webkit-keyframes ripple {
+  from {
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+  }
+  to {
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    opacity: 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */
