@@ -1,3 +1,4 @@
+// Nav 1
 .c_nav_slideIn_1 {
       background: rgba(0,0,0,0.2);
       nav {
@@ -27,7 +28,7 @@
       }
 }
 
-// Navigation Slider background
+// Nav 2
 .c_nav_slideInBackground {
       @extend .c_nav_slideIn_1;
       background: rgba(0,0,0,0.3);
@@ -49,6 +50,43 @@
       }
 }
 
+// Nav 3
+.c_nav_slideInBackground_2 {
+      @extend .c_nav_slideInBackground;
+      background: rgba(0,0,0,0.4);
+      nav ul {
+            li a {
+                  position: relative;
+                  padding: 15px 25px;
+                  color: black;
+                  span.slider_in_left {
+                        height: 0%;
+                        width: 100%;
+                        top: 0;
+                        z-index: 0;
+                  }
+            }
+      }
+}
+.c_nav_slideInBackground_3 {
+      @extend .c_nav_slideInBackground_2;
+      background: rgba(0,0,0,0.5);
+      nav ul li a span.slider_in_left {
+            height: 0%;
+            width: 100%;
+      }
+}
+
+
+
+
+
+
+
+
+
+
+// Animations
 @keyframes slideInToLeft {
       from {width: 0%;}
       to {width: 100%;}
@@ -57,11 +95,21 @@
       from {width: 100%; margin-left: 0%; }
       to {width: 0%; margin-left: 100%; }
 }
+@keyframes slideInToTop {
+      from {height: 0%; margin-top: 100%; }
+      to {height: 100%; margin-top: 0%; }
+}
+@keyframes slideOutToTop {
+      from {height: 100%; margin-bottom: 0%; }
+      to {height: 0%; margin-bottom: 100%; }
+}
 @keyframes slideInToBottom {
-      from {width: 0%;}
-      to {width: 100%;}
+      from {height: 0%; }
+      to {height: 100%; }
 }
 @keyframes slideOutToBottom {
-      from {width: 100%; margin-left: 0%; }
-      to {width: 0%; margin-left: 100%; }
+      from {height: 100%;  }
+      to {height: 0%;  }
+      from {height: 100%; margin-top: 5%; }
+      to {height: 0%; margin-top: 55%; }
 }

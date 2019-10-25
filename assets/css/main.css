@@ -91,15 +91,15 @@ section {
   }
 }
 
-.c_nav_slideIn_1, .c_nav_slideInBackground {
+.c_nav_slideIn_1, .c_nav_slideInBackground, .c_nav_slideInBackground_2, .c_nav_slideInBackground_3 {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.c_nav_slideIn_1 nav, .c_nav_slideInBackground nav {
+.c_nav_slideIn_1 nav, .c_nav_slideInBackground nav, .c_nav_slideInBackground_2 nav, .c_nav_slideInBackground_3 nav {
   padding-top: 20px;
 }
 
-.c_nav_slideIn_1 nav > ul, .c_nav_slideInBackground nav > ul {
+.c_nav_slideIn_1 nav > ul, .c_nav_slideInBackground nav > ul, .c_nav_slideInBackground_2 nav > ul, .c_nav_slideInBackground_3 nav > ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,7 +115,7 @@ section {
   margin: 0 auto;
 }
 
-.c_nav_slideIn_1 ul > li > a, .c_nav_slideInBackground ul > li > a {
+.c_nav_slideIn_1 ul > li > a, .c_nav_slideInBackground ul > li > a, .c_nav_slideInBackground_2 ul > li > a, .c_nav_slideInBackground_3 ul > li > a {
   display: inline-block;
   text-decoration: none;
   color: gray;
@@ -127,7 +127,7 @@ section {
   overflow: hidden;
 }
 
-.c_nav_slideIn_1 li > a > span.slider_bottom, .c_nav_slideInBackground li > a > span.slider_bottom {
+.c_nav_slideIn_1 li > a > span.slider_bottom, .c_nav_slideInBackground li > a > span.slider_bottom, .c_nav_slideInBackground_2 li > a > span.slider_bottom, .c_nav_slideInBackground_3 li > a > span.slider_bottom {
   position: absolute;
   height: 2px;
   background: white;
@@ -136,16 +136,16 @@ section {
   left: 0;
 }
 
-.c_nav_slideInBackground {
+.c_nav_slideInBackground, .c_nav_slideInBackground_2, .c_nav_slideInBackground_3 {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.c_nav_slideInBackground nav ul li a {
+.c_nav_slideInBackground nav ul li a, .c_nav_slideInBackground_2 nav ul li a, .c_nav_slideInBackground_3 nav ul li a {
   position: relative;
   padding: 15px 25px;
 }
 
-.c_nav_slideInBackground nav ul li a span.slider_in_left {
+.c_nav_slideInBackground nav ul li a span.slider_in_left, .c_nav_slideInBackground_2 nav ul li a span.slider_in_left, .c_nav_slideInBackground_3 nav ul li a span.slider_in_left {
   position: absolute;
   background: rgba(0, 0, 0, 0.1);
   pointer-events: none;
@@ -154,6 +154,32 @@ section {
   top: 0;
   left: 0;
   z-index: 0;
+}
+
+.c_nav_slideInBackground_2, .c_nav_slideInBackground_3 {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.c_nav_slideInBackground_2 nav ul li a, .c_nav_slideInBackground_3 nav ul li a {
+  position: relative;
+  padding: 15px 25px;
+  color: black;
+}
+
+.c_nav_slideInBackground_2 nav ul li a span.slider_in_left, .c_nav_slideInBackground_3 nav ul li a span.slider_in_left {
+  height: 0%;
+  width: 100%;
+  top: 0;
+  z-index: 0;
+}
+
+.c_nav_slideInBackground_3 {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.c_nav_slideInBackground_3 nav ul li a span.slider_in_left {
+  height: 0%;
+  width: 100%;
 }
 
 @-webkit-keyframes slideInToLeft {
@@ -196,43 +222,99 @@ section {
   }
 }
 
-@-webkit-keyframes slideInToBottom {
+@-webkit-keyframes slideInToTop {
   from {
-    width: 0%;
+    height: 0%;
+    margin-top: 100%;
   }
   to {
-    width: 100%;
+    height: 100%;
+    margin-top: 0%;
+  }
+}
+
+@keyframes slideInToTop {
+  from {
+    height: 0%;
+    margin-top: 100%;
+  }
+  to {
+    height: 100%;
+    margin-top: 0%;
+  }
+}
+
+@-webkit-keyframes slideOutToTop {
+  from {
+    height: 100%;
+    margin-bottom: 0%;
+  }
+  to {
+    height: 0%;
+    margin-bottom: 100%;
+  }
+}
+
+@keyframes slideOutToTop {
+  from {
+    height: 100%;
+    margin-bottom: 0%;
+  }
+  to {
+    height: 0%;
+    margin-bottom: 100%;
+  }
+}
+
+@-webkit-keyframes slideInToBottom {
+  from {
+    height: 0%;
+  }
+  to {
+    height: 100%;
   }
 }
 
 @keyframes slideInToBottom {
   from {
-    width: 0%;
+    height: 0%;
   }
   to {
-    width: 100%;
+    height: 100%;
   }
 }
 
 @-webkit-keyframes slideOutToBottom {
   from {
-    width: 100%;
-    margin-left: 0%;
+    height: 100%;
   }
   to {
-    width: 0%;
-    margin-left: 100%;
+    height: 0%;
+  }
+  from {
+    height: 100%;
+    margin-top: 5%;
+  }
+  to {
+    height: 0%;
+    margin-top: 55%;
   }
 }
 
 @keyframes slideOutToBottom {
   from {
-    width: 100%;
-    margin-left: 0%;
+    height: 100%;
   }
   to {
-    width: 0%;
-    margin-left: 100%;
+    height: 0%;
+  }
+  from {
+    height: 100%;
+    margin-top: 5%;
+  }
+  to {
+    height: 0%;
+    margin-top: 55%;
   }
 }
 /*# sourceMappingURL=main.css.map */
