@@ -1,0 +1,67 @@
+.c_nav_slideIn_1 {
+      background: rgba(0,0,0,0.2);
+      nav {
+            padding-top: 20px;
+      }
+      nav > ul {
+            @include flexrowcenter;
+            list-style: none;
+            margin: 0 auto;
+      }
+
+      ul > li > a {
+            display: inline-block;
+            @include resetlink;
+            @include linkpaddingmargin;
+            position: relative;
+            overflow: hidden;
+      }
+
+      li > a > span.slider_bottom {
+            position: absolute;
+            height: 2px;
+            background: white;
+            width: 0%;
+            bottom: 0;
+            left: 0;
+      }
+}
+
+// Navigation Slider background
+.c_nav_slideInBackground {
+      @extend .c_nav_slideIn_1;
+      background: rgba(0,0,0,0.3);
+      nav ul {
+            li a {
+                  position: relative;
+                  padding: 15px 25px;
+                  span.slider_in_left {
+                        position: absolute;
+                        background: rgba(0, 0, 0, 0.1);
+                        pointer-events: none;
+                        height: 100%;
+                        width: 0%;
+                        top: 0;
+                        left: 0;
+                        z-index: 0;
+                  }
+            }
+      }
+}
+
+@keyframes slideInToLeft {
+      from {width: 0%;}
+      to {width: 100%;}
+}
+@keyframes slideOutToRight {
+      from {width: 100%; margin-left: 0%; }
+      to {width: 0%; margin-left: 100%; }
+}
+@keyframes slideInToBottom {
+      from {width: 0%;}
+      to {width: 100%;}
+}
+@keyframes slideOutToBottom {
+      from {width: 100%; margin-left: 0%; }
+      to {width: 0%; margin-left: 100%; }
+}

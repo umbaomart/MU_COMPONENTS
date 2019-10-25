@@ -1,13 +1,10 @@
 // Material Buttons
 let btns_material = document.querySelectorAll('.btn_m');
 
-btns_material.forEach(btns => {
-      btns.addEventListener('click', function (e) {
-            // e.preventDefault();
-            // console.log(e.target)
-            myFuncBtn_m(e);
-      })
-});
+for (let index = 0; index < btns_material.length; index++) {
+      const btn = btns_material[index];
+      btn.addEventListener('mousedown', function(e) { myFuncBtn_m(e); })
+}
 
 // Functions
 function myFuncBtn_m(e) {
@@ -35,9 +32,4 @@ function myFuncBtn_m(e) {
       ripple_el.style.top = top + 'px';
       ripple_el.style.left = left + 'px';
       return false;
-
-      // ripple_el.style.width = Math.max(rect.width, rect.height) + 'px';
-
-      // console.log(rect)
-
 }
